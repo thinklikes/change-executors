@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Events;
 
-use App\Events\CocaEvent;
+use App\Events\DrinkEvent;
 use App\Listeners\CocaListener;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
@@ -13,10 +13,10 @@ class CocaEventTest extends TestCase
     {
         Event::fake();
 
-        CocaEvent::dispatch();
+        DrinkEvent::dispatch();
 
         Event::assertListening(
-            CocaEvent::class,
+            DrinkEvent::class,
             CocaListener::class
         );
     }

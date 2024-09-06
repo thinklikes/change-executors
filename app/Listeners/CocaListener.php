@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\CocaEvent;
+use App\Events\DrinkEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
@@ -19,7 +19,7 @@ class CocaListener
     /**
      * Handle the event.
      */
-    public function handle(CocaEvent $event): void
+    public function handle(DrinkEvent $event): void
     {
         //
     }
