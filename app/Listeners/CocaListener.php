@@ -2,11 +2,11 @@
 
 namespace App\Listeners;
 
-use App\Events\CocaLoved;
+use App\Events\CocaEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class SendPodcastNotification
+class CocaListener
 {
     /**
      * Create the event listener.
@@ -19,7 +19,7 @@ class SendPodcastNotification
     /**
      * Handle the event.
      */
-    public function handle(CocaLoved $event): void
+    public function handle(CocaEvent $event): void
     {
         //
     }

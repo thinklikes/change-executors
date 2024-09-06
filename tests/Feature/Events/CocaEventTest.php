@@ -2,22 +2,22 @@
 
 namespace Tests\Feature\Events;
 
-use App\Events\CocaLoved;
-use App\Listeners\SendPodcastNotification;
+use App\Events\CocaEvent;
+use App\Listeners\CocaListener;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
-class CocaLovedTest extends TestCase
+class CocaEventTest extends TestCase
 {
     public function testHandle()
     {
         Event::fake();
 
-        CocaLoved::dispatch();
+        CocaEvent::dispatch();
 
         Event::assertListening(
-            CocaLoved::class,
-            SendPodcastNotification::class
+            CocaEvent::class,
+            CocaListener::class
         );
     }
 }
