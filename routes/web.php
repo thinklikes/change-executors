@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\CocaController;
+use App\Contracts\DrinkControllerInterface;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/drink', [CocaController::class, 'drink']);
+Route::get('/drink', [DrinkControllerInterface::class, 'drink']);

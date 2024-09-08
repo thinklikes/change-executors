@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Drinks\Console\Commands;
 
+use App\Contracts\DrinkCommandInterface;
 use Illuminate\Console\Command;
 
-class CocaCommand extends Command
+class CocaCommand extends Command implements DrinkCommandInterface
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:coca';
+    protected $signature = 'app:drink';
 
     /**
      * The console command description.

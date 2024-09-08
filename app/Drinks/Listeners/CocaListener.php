@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Drinks\Listeners;
 
+use App\Contracts\DrinkListenerInterface;
 use App\Events\DrinkEvent;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Log;
 
-class CocaListener
+class CocaListener implements DrinkListenerInterface
 {
     /**
      * Create the event listener.
@@ -21,6 +21,6 @@ class CocaListener
      */
     public function handle(DrinkEvent $event): void
     {
-        //
+        Log::info('I love Coca!!');
     }
 }
